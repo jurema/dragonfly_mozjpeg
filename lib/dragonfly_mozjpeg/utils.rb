@@ -3,6 +3,8 @@ require 'os'
 module DragonflyMozjpeg
   module Utils
 
+    BASE_PATH = File.expand_path(File.join(__dir__, '../../vendor/mozjpeg'))
+
     module_function
 
     def logger
@@ -12,7 +14,7 @@ module DragonflyMozjpeg
     end
 
     def check_binary(current, file)
-      if File.exists?(current)
+      if current && File.exists?(current)
         current
       elsif OS.linux? && OS.bits == 64
         File.join(BASE_PATH, "linux/#{file}")
