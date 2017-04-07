@@ -1,0 +1,10 @@
+*.gem
+*.rbc
+Gemfile.lock
+.ruby-version
+.ruby-gemset
+.rvmrc
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
