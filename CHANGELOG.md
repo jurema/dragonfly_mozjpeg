@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.0.3
+
+* change project description
+
 ## 0.0.2
 
 * adjust encoder options, could be string, array or hash

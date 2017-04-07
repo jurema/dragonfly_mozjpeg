@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Jurema']
   spec.email         = ['oops@jurema.la']
 
-  spec.summary       = 'Dragonfly analysers and processors for libvips image processing library.'
+  spec.summary       = 'Dragonfly processors for mozilla cjpeg and jpegtran encoders.'
   spec.homepage      = 'https://github.com/jurema/dragonfly_mozjpeg'
   spec.license       = 'MIT'
 
