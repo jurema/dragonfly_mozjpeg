@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'dragonfly', '~> 1.0'
+  spec.add_dependency 'os', '~> 0.9.6'
 
   spec.add_development_dependency 'bundler', '~> 1.12'
 end
