@@ -31,9 +31,9 @@ module DragonflyMozjpeg
         opts[-1] = opts.last.map do |k,v|
           " -#{k} #{v}" unless k.to_s == 'outfile'
         end.join[2..-1] if opts.last.is_a? Hash
-        (opts - ['outfile']).join(' -')
+        " -#{(opts - ['outfile']).join(' -')}"
       elsif opts.is_a? Hash
-        opts.last.map do |k,v|
+        opts.map do |k,v|
           " -#{k} #{v}" unless k.to_s == 'outfile'
         end.join
       else

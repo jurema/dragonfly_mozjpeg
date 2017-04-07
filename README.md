@@ -1,6 +1,6 @@
 # dragonfly mozjpeg
 
-Plugin for [mozilla's](https://github.com/mozilla/mozjpeg) cjpeg and jpegtran encoders for dragonfly.
+Plugin for [mozilla's](https://github.com/mozilla/mozjpeg) cjpeg and jpegtran encoders for [dragonfly](https://github.com/markevans/dragonfly).
 
 ## Installation
 
@@ -12,7 +12,7 @@ gem 'dragonfly_mozjpeg'
 
 And then execute:
 
-```ruby
+```sh
 $ bundle
 ```
 
@@ -30,6 +30,17 @@ Dragonfly.app.configure do
   plugin :mozjpeg
 end
 ```
+
+Overwrite default binaries, For example:
+
+```ruby
+Dragonfly.app.configure do
+  plugin :mozjpeg,
+    cjpeg:    '/opt/mozjpeg/bin/cjpeg',
+    jpegtran: '/opt/mozjpeg/bin/jpegtran'
+end
+```
+
 ### Processors
 
 #### Lossy
@@ -37,14 +48,14 @@ end
 Lossy compression with cjpeg, and you can pass cjpeg options. For example:
 
 ```ruby
-image.lossy(:noovershoot, quality: "70,60", sample: "2x2", smooth: 10)
+image.lossy([:noovershoot, quality: "70,60", sample: "2x2", smooth: 10])
 ```
 #### Lossless
 
 Lossless compression with jpegtran, jpegtran and you can pass options, For example:
 
 ```ruby
-image.lossless(:grayscale, :trim, copy: :none, flip: :horizontal)
+image.lossless([:grayscale, :trim, copy: :none, flip: :horizontal])
 ```
 ## Contributing
 
