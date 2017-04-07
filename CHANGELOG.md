@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.0.4
+
+* adjust bad handling of default plugin options
+
 ## 0.0.3
 
 * change project description
